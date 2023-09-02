@@ -1,0 +1,114 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.container button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+}
+.text {
+    color: var(--primary-colors-black-100, #171717);
+    /* Headings/Desktop & Tablet/H1 */
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 112.5% */
+    width: 100%;
+}
+
+.text p{
+    color: grey;
+    line-height: 40px;
+}
+
+.nameInput {
+    display: flex;
+    gap: 15px;
+    
+}
+.otherInputs{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.nameInput input{
+    display: flex;
+    padding: 10px 12px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid var(--black-shades-black-10, #EEEEF4);
+    background: var(--black-shades-white-100, #FFF);
+}
+
+.otherInputs input{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 12px;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid var(--black-shades-black-10, #EEEEF4);
+    background: var(--black-shades-white-100, #FFF);
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+.surname{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
+.checkbox{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.bottomtext{
+    color: var(--black-shades-black-60, #797E82);
+
+    /* Paragraphs/P3/Medium */
+    font-family: Ubuntu;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 14px; /* 116.667% */
+}
+
+.Link{
+    color: var(--purple, #5F00D9);
+    
+    /* Paragraphs/P3/Medium */
+    font-family: Ubuntu;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 14px;
+    text-decoration: none;
+}
+
+.errorText{
+    color: rgb(240, 4, 4);
+    font-size: smaller;
+    font-style: normal;
+    align-items: center;
+}

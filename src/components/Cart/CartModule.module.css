@@ -1,0 +1,46 @@
+.cartPage{
+    
+    padding: 30px;
+    display: flexbox;
+    flex-direction: column;
+    margin-top: 60px ;
+    width: auto;
+}
+
+.title{
+    width: auto;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(240, 22, 22);
+    border-radius: 10px;
+    color: white;
+}
+
+.totalCart{
+    display: flex;
+    justify-content: space-between;
+    padding:  10px;
+    margin: auto;
+    align-items: center;
+}
+
+.cartBtn{
+    border-radius: 10px;
+    padding: 8px;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.cartBtn button:hover,
+.cartBtn button:active{
+    background-color: rgb(230, 139, 139);
+}
+

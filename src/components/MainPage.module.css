@@ -1,0 +1,51 @@
+.main{
+    display: flex;
+    padding: 40px;
+    width: 100%;
+    align-items: center;
+    height: auto;
+    
+}
+.main h1{
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 70px;
+}
+
+.main p{
+    font-weight: 600;
+    color: rgb(84, 81, 81);
+    max-width: 400px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.button{
+    display: flex;
+    gap:40px;
+    font-size: 24px;
+}
+
+.second
+{
+    background: transparent;
+    color: rgb(84, 81, 81);
+    border: 1px solid rgb(84, 81, 81);;
+}
+
+.available{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.shopImages{
+    display: flex;
+    gap: 16px;
+}
+*{
+    margin: 0;
+}
+

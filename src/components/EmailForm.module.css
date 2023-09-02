@@ -1,0 +1,28 @@
+.form_control{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    position: relative;
+    gap:20px;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.form_control input{
+    height: 40px;
+    padding: 0 8px;
+    border: 2px solid rgb(216, 10, 10);
+}
+
+.form_control textarea{
+    border: 2px solid rgb(216, 10, 10);
+}
+
+.form_control label{
+    position: absolute;
+    top:-12px;
+    left: 10px;
+    background-color: white;
+    padding: 0 10px;
+}
+

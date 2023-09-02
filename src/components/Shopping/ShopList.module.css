@@ -1,0 +1,39 @@
+
+
+
+.card{
+    max-width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 24px ;
+    
+}
+
+.cardimg{
+  max-width: 14rem;
+  max-height: 10rem;
+  padding: 2px 2px ;
+  align-items: center;
+}
+
+.cardbody{
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.cardtitle{
+
+}
+
+.cardtext{
+
+}
+
+.btn{
+    max-width: 80%;
+    border-radius: 10px;
+}

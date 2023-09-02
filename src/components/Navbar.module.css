@@ -1,0 +1,14 @@
+
+list li{
+    color: rgb(23, 21, 21);
+    text-decoration: none;
+}
+.list a{
+    text-decoration: none;
+    
+}
+
+.list a:hover,
+.list a:active{
+    color: rgb(204, 10, 10);
+}
