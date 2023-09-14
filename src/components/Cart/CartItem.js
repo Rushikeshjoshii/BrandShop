@@ -26,8 +26,7 @@ const CartItem = (props) =>{
     <li className={classes.item}>
       <img src={image} alt="Product Image" />
       <header>
-        <h3>{name}</h3>
-        
+        <h4>{name}</h4>
       </header>
       <div className={classes.details}>
         <div className={classes.quantity}>

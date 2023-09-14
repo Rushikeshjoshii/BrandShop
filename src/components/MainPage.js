@@ -5,7 +5,6 @@ import flipkart from './assets/flipkart.png';
 import amazon from './assets/amazon.png';
 import { useNavigate } from "react-router-dom";
 
-
 const MainPage=()=>{
 
     //navigating to shop page on clicking shop now button
@@ -43,7 +42,6 @@ const MainPage=()=>{
                        <img src={shoeImg} alt="shoe image"/>
                     </div>
                 </main>
-               
         </Fragment>
     );
 };

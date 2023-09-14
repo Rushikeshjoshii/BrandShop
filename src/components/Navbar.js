@@ -51,9 +51,7 @@ const Navbar = ()=>{
                         {!isLoggedIn && <button onClick={loginNavigateHandler}>Login</button>}
                         {isLoggedIn && <button onClick={logoutHandler} >Logout</button>}
                     </li>
-                </ul>
-                
-                
+                </ul>              
                 
             </nav>
             

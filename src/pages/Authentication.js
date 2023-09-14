@@ -8,7 +8,7 @@ const Authentication =()=>{
 
     return(
         <div>
-            {!isLoggedIn && <Login/>}
+            <Login/>
             
         </div>
     );

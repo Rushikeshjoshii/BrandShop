@@ -3,6 +3,7 @@ import ShopList from "../components/Shopping/ShopList";
 import '.././App.css'
 
 import SHOP_DATA from '../components/ShopData';
+import React,{ lazy,Suspense} from "react";
 
 const Shop=()=>{
 

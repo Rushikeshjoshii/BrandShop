@@ -1,43 +1,23 @@
 .footer{
     
     width: 100%;
-    padding: 20px;
+    padding: 2px;
     margin: auto;
     display: flex;
     justify-content: space-around;
     position:fixed;
     bottom: 0px;
     background-color: white;
+    height: 20px;
     
 }
 
 .column{
     display: flex;
-    flex-direction: column;
     gap: 8px;
-    align-items: center;
-    font-size: small;
-}
-.column a{
-    text-decoration: none;
-    color: black;
+    align-items: flex-end;
+    font-size: large;
 }
 
-.column h3{
-    color: rgb(224, 29, 29);
-}
 
-.copyright{
-    background-color: silver;
-    position: fixed;
-    bottom: 0px;
-    padding: 1px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    opacity: 20%;
-}
 
-.copyright h3{
-    align-items: baseline;
-}

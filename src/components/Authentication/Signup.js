@@ -1,3 +1,4 @@
+import React from 'react';
 import Card from '../Layout/Card';
 import classes from './Signup.module.css';
 import { Link, NavLink, useNavigate } from "react-router-dom";
@@ -5,8 +6,36 @@ import {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { authActions } from '../../store/auth-slice';
 import {CgProfile} from 'react-icons/cg';
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
+import Button from "@mui/material/Button";
+import Alert from "@mui/material/Alert";
+import Stack from "@mui/material/Stack";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import Slide from "@mui/material/Slide";
+import { Fragment } from 'react';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
+
 
 const Signup=()=>{
+    //modal 
+    const [open, setOpen] = React.useState(false);
+    const [error,setError] = useState(false);
+
+    const handleClose = () => {
+        setOpen(false);
+      };
+    
+      const handleDialogClose = () => {
+        setOpen(false);
+      };
 
    const navigate=useNavigate();
 
@@ -125,19 +154,22 @@ const Signup=()=>{
     if(!response.ok)
     {
         const error=data.error.message;
-        alert(error);
+        setError(true);
+        setOpen(true);
+
+        //alert(error);
     }
     
     else{
         //pushing token data to Redux store
         dispatch(authActions.signup(data.idToken))
         // console.log(data.idToken);
-        alert("Successfully registered.");
+        setOpen(true);
+        //alert("Successfully registered.");
         setenteredName('');
         setenteredEmail('');
         setenteredPassword('');
         setenteredConfirmPass('');
-        navigate('/login');
     }
     
     
@@ -145,80 +177,117 @@ const Signup=()=>{
 
 
     return(
-        <form onSubmit={formSubmitHandler}>
-             <Card>
-            <div className={classes.container}>
-                <div className={classes.text}>
-                    <h1>Welcome to Nike!</h1>   
-                    <p>Create a free account by filling data below.</p>
-                </div>
+        <Fragment>
+            <form onSubmit={formSubmitHandler}>
+                <Card>
+                <div className={classes.container}>
+                    <div className={classes.text}>
+                        <h1>Welcome to Nike!</h1>   
+                        <p>Create a free account by filling data below.</p>
+                    </div>
 
-                <div className={classes.nameInput}>
-                    <section className={classes.name}>
-                        <label htmlFor='name'>Name</label>
+                    <div className={classes.nameInput}>
+                        <section className={classes.name}>
+                            <label htmlFor='name'>Name</label>
+                            <input 
+                                type='name' 
+                                placeholder='Enter your name...'
+                                value={name} 
+                                onChange={nameInputChangeHandler}
+                                onBlur={onNameBlurHandler}   
+                            />
+                            {!inputNameIsValid && <p className={classes.errorText}>Name field Can't Empty.</p>}
+                        </section>
+                        
+                        
+                        <section className={classes.surname}> 
+                            <label htmlFor='surname'>Surname</label>
+                            <input 
+                                type='name'
+                                placeholder='Enter your surname...'
+                                value={surname}
+                            /> 
+                        </section>     
+                    </div>
+
+                    <div className={classes.otherInputs}>
+                        <label htmlFor='email'>Email</label>
                         <input 
-                            type='name' 
-                            placeholder='Enter your name...'
-                            value={name} 
-                            onChange={nameInputChangeHandler}
-                            onBlur={onNameBlurHandler}   
+                            type='email'
+                            placeholder='name@email.com'
+                            value={email}
+                            onChange={emailInputChangeHandler}
+                            onBlur={onEmailBlurHandler}
                         />
-                        {!inputNameIsValid && <p className={classes.errorText}>Name field Can't Empty.</p>}
-                    </section>
-                    
-                    
-                    <section className={classes.surname}> 
-                        <label htmlFor='surname'>Surname</label>
+                        {!inputEmailIsValid && <p className={classes.errorText}>Please Enter Valid Email.</p>}
+                        
+                        <label htmlFor='password'>Password</label>
                         <input 
-                            type='name'
-                            placeholder='Enter your surname...'
-                            value={surname}
-                        /> 
-                    </section>     
-                </div>
+                            type='password' 
+                            placeholder='**************'
+                            value={password}
+                            onChange={passwordInputHandler}
+                        />
+                        <label htmlFor='password'>Confirm Password</label>
+                        <input 
+                            type='password' 
+                            placeholder='**************'
+                            value={confirmPass}
+                            onChange={confirmPassInputHandler}
+                        />
+                        {!isPasswordMatch && <p className={classes.errorText}>Password is not Matching.</p>}
+                    </div>
 
-                <div className={classes.otherInputs}>
-                    <label htmlFor='email'>Email</label>
-                    <input 
-                        type='email'
-                        placeholder='name@email.com'
-                        value={email}
-                        onChange={emailInputChangeHandler}
-                        onBlur={onEmailBlurHandler}
-                    />
-                    {!inputEmailIsValid && <p className={classes.errorText}>Please Enter Valid Email.</p>}
-                    
-                    <label htmlFor='password'>Password</label>
-                    <input 
-                        type='password' 
-                        placeholder='**************'
-                        value={password}
-                        onChange={passwordInputHandler}
-                    />
-                    <label htmlFor='password'>Confirm Password</label>
-                    <input 
-                        type='password' 
-                        placeholder='**************'
-                        value={confirmPass}
-                        onChange={confirmPassInputHandler}
-                    />
-                    {!isPasswordMatch && <p className={classes.errorText}>Password is not Matching.</p>}
+                    <div className={classes.checkbox}>
+                        <input type='checkbox'value={isChecked} onChange={checkBoxHandler}/>
+                        <p>I agree with Terms & Conditions.</p> 
+                        {!isChecked && <p className={classes.errorText}>You must agree with Terms & Conditions to continue.</p>}
+                    </div>
+                        {isChecked && <button><CgProfile/>Create Account</button>}
+                    <div>
+                        <p className={classes.bottomtext}>Already have an account?<Link to='/login' className={classes.Link}>Log In</Link> </p>
+                    </div>
+                        
                 </div>
-
-                <div className={classes.checkbox}>
-                    <input type='checkbox'value={isChecked} onChange={checkBoxHandler}/>
-                    <p>I agree with Terms & Conditions.</p> 
-                    {!isChecked && <p className={classes.errorText}>You must agree with Terms & Conditions to continue.</p>}
-                </div>
-                    {isChecked && <button><CgProfile/>Create Account</button>}
+            </Card>
+            </form>
+            {open && 
                 <div>
-                    <p className={classes.bottomtext}>Already have an account?<Link to='/login' className={classes.Link}>Log In</Link> </p>
-                </div>
-                    
-            </div>
-        </Card>
-        </form>
-       
+                <Backdrop
+                  sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                  open={open}
+                  onClick={handleClose}
+                >
+                  <div>
+                    <Dialog
+                      open={open}
+                      TransitionComponent={Transition}
+                      keepMounted
+                      onClose={handleDialogClose}
+                      aria-describedby="alert-dialog-slide-description"
+                    >
+                     { !error && <DialogTitle>{"Welcome To Nike Family."}</DialogTitle>}
+                     { error && <DialogTitle>{"Failed to Register"}</DialogTitle>}
+                     {!error&&  <DialogContent>
+                        <DialogContentText id="alert-dialog-slide-description">
+                            You Have Been Successfully Registered.
+                            Please Continue Your Journey By Logging In.
+                        </DialogContentText>
+                      </DialogContent>}
+                      {error&&  <DialogContent>
+                        <DialogContentText id="alert-dialog-slide-description">
+                            Something Went Wrong.
+                        </DialogContentText>
+                      </DialogContent>}
+                      <DialogActions>
+                        <Button onClick={handleClose}>OKay</Button>
+                      </DialogActions>
+                    </Dialog>
+                  </div>
+                </Backdrop>
+              </div>
+            }
+        </Fragment>
 
     );
 }

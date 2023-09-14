@@ -2,7 +2,8 @@ import {useSelector } from "react-redux";
 import Card from "../Layout/Card";
 import CartItem from "./CartItem";
 import classes from './CartModule.module.css'
-
+import { Fragment } from "react";
+import {BsFillCreditCardFill} from 'react-icons/bs';
 
 const CartModule=()=>{
 
@@ -40,6 +41,8 @@ const CartModule=()=>{
    
 
     return(
+        <div className={classes.flex}>
+        <div className={classes.card}>
         <div className={classes.cartPage} >
             <div className={classes.title}>
                 <h1>Your Cart Items</h1> 
@@ -67,9 +70,10 @@ const CartModule=()=>{
                 <h2>Rs.{finalPrice}</h2>
             </div>
             {isLoggedIn && <button className={classes.cartBtn} onClick={CheckOutHandler}>Proceed To Checkout</button>}
-            {!isLoggedIn && <p>Please Login to Continue</p>}
-            
-            
+            {!isLoggedIn && <p>Please Login to Continue</p>}   
+        </div>
+        </div>
+        
         </div>
     );
 };
