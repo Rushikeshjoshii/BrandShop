@@ -1,7 +1,8 @@
 import fireflex from './assets/FireFlex.png';
 import Blade from './assets/shoe_image.png';
 import HellFire from './assets/Hellfire.png';
-
+import Nike1 from './assets/Nike1.jpg';
+import Nike3 from './assets/Nike3.jpg';
 
 const SHOP_DATA=[
     {
@@ -16,14 +17,14 @@ const SHOP_DATA=[
         name:'Nike FireFlex',
         description : 'Strong and Light weight!',
         price : 40,
-        image:fireflex
+        image:Nike1
     },
     {
         id:'p3',
         name:'Nike HellFire',
         description : 'Strong and Light weight!',
         price : 80,
-        image:HellFire
+        image:Nike1
     },
     {
         id:'p4',
@@ -37,21 +38,21 @@ const SHOP_DATA=[
         name:'Nike HellFire',
         description : 'Strong and Light weight!',
         price : 80,
-        image:HellFire
+        image:Nike1
     },
     {
         id:'p6',
         name:'Nike HellFire',
         description : 'Strong and Light weight!',
         price : 80,
-        image:HellFire
+        image:Nike3
     },
     {
         id:'p7',
         name:'Nike HellFire',
         description : 'Strong and Light weight!',
         price : 80,
-        image:HellFire
+        image:Nike3
     },
     {
         id:'p8',

@@ -15,7 +15,7 @@ const MainPage=()=>{
 
     return(
         <Fragment>
-           
+            <div className={classes.mainPage}>
                 <main className={classes.main}>
                     <div className={classes.content}>
                         <h1>YOUR FEET DESERVE THE BEST</h1>
@@ -24,7 +24,7 @@ const MainPage=()=>{
                             YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR SHOES.
                         </p>
 
-                        <div className={classes.button}>
+                    <div className={classes.button}>
                         <button onClick={shopNavigateHandler}>Shop Now</button>
                         <button className={classes.second}>Category</button>
                     </div>
@@ -42,6 +42,7 @@ const MainPage=()=>{
                        <img src={shoeImg} alt="shoe image"/>
                     </div>
                 </main>
+            </div>
         </Fragment>
     );
 };

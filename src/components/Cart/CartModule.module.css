@@ -64,3 +64,9 @@
     background-color: rgb(230, 139, 139);
 }
 
+
+@media (max-width: 800px) {
+    .card{
+      width: 500px;
+    }
+  }

@@ -15,7 +15,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { authActions } from './store/auth-slice';
 import Footer from './components/footer/footer';
 import { cartActions } from './store/cart-slice';
-
+import { useMediaQuery } from 'react-responsive';
 
 //creatig routes
 const router = createBrowserRouter([
@@ -38,6 +38,9 @@ const router = createBrowserRouter([
 
 
 function App() {
+
+
+
   //const cart = useSelector(state=>state.cart);
   const dispatch = useDispatch();
   useEffect(()=>{

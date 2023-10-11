@@ -65,7 +65,9 @@
     border-radius: 8px;
     border: 1px solid var(--black-shades-black-10, #EEEEF4);
     background: var(--black-shades-white-100, #FFF);
+    
 }
+
 .name{
     display: flex;
     flex-direction: column;
@@ -73,6 +75,7 @@
     align-items: flex-start;
     gap: 8px;
     flex: 1 0 0;
+    color: black;
 }
 
 .surname{
@@ -82,6 +85,7 @@
     align-items: flex-start;
     gap: 8px;
     flex: 1 0 0;
+    color: black;
 }
 
 .checkbox{
@@ -118,4 +122,8 @@
     font-size: smaller;
     font-style: normal;
     align-items: center;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
 }

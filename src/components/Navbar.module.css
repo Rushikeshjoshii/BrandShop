@@ -1,8 +1,23 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
-list li{
+ul li{
     color: rgb(23, 21, 21);
     text-decoration: none;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    
 }
+
+.list li{
+    display:flex;
+    list-style: none;
+}
+.list 
 .list a{
     text-decoration: none;
     
@@ -11,4 +26,42 @@ list li{
 .list a:hover,
 .list a:active{
     color: rgb(204, 10, 10);
+    
+}
+
+
+@media screen and (min-width:780px) {
+    .icon{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navigationmenu{
+        position: absolute;
+        top: 50px;   
+        width: 30%;
+        height: 200px;
+        background-color: black;
+        opacity: 80%;
+        padding: 5px 5px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    }
+  
+    .navigationmenu ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 5px 5px;
+        font-weight: 800;
+    }
+
+   
+    .navigationmenu ul li:hover{
+        list-style: none;
+        color: red;
+        background-color: white;
+        border-radius: 12px;
+    }
 }

@@ -9,3 +9,8 @@
     background-color: white;
   }
   
+  @media (max-width: 600px) {
+    .card{
+      width: 250px;
+    }
+  }

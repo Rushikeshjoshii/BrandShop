@@ -205,7 +205,7 @@ const Signup=()=>{
                             <input 
                                 type='name'
                                 placeholder='Enter your surname...'
-                                value={surname}
+                                
                             /> 
                         </section>     
                     </div>
