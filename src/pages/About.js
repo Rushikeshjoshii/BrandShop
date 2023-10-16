@@ -1,8 +1,9 @@
+import AboutUs from "../components/About/AboutUs";
 
 const About =()=>{
     return(
         <main>
-            <h1>About</h1>
+           <AboutUs/>
         </main>
     );
 };

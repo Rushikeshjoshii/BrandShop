@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    animation: slide-from-down 1s ease-out forwards
 }
 .button{
     display: flex;
@@ -58,8 +59,21 @@
     padding: 4px;
     width: min-content;
     justify-items: end;
+    animation: slide-from-right 1s ease-out forwards;
 }
 
+.div2{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+   
+}
+.div2 h1{
+    font-weight: 800;
+    font-size: 400;
+}
 @media screen and (max-width: 800px) {
     .main{
         flex-direction: column;
@@ -86,3 +100,23 @@
     }
 }
  
+@keyframes slide-from-right{
+    0%{
+      transform : translateX(30px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-from-down{
+    0%{
+      transform : translateY(30px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

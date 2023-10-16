@@ -1,0 +1,174 @@
+.title{
+    font-size: 120px;
+    margin-top: 100px;
+    
+}
+
+.titleDiv{
+    margin-top: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    line-height: 0.85;
+    letter-spacing: 0px;
+    font-weight: 800;
+    font-family: "FuturaNike",var(--displayFont,"FuturaNike"),sans-serif;
+    font-style: normal;
+    background-color: rgb(14, 14, 14);
+    color: white;
+}
+.title p{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 400;
+}
+.secondDiv{
+    padding: 25px;
+    text-overflow: hidden;
+    background-color: rgb(14, 14, 14);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    gap: 20px;
+}
+.secondDiv img{
+    box-shadow: 0 2px 8px rgba(245, 240, 240, 0.25);
+    max-width: 600px;
+    animation: slide-up 8s ease-out forwards;
+}
+
+.thirdDiv{
+    padding: 25px;
+    text-overflow: hidden;
+    background-color: rgb(14, 14, 14);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    gap: 20px;
+}
+.thirdDiv img{
+    box-shadow: 0 2px 8px rgba(246, 243, 243, 0.25);
+    max-width: 600px;
+    animation: slide-up 8s ease-out forwards;
+}
+
+.footer{
+    background-color:  rgb(54, 53, 53);
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    
+}
+.footer ul li{
+    color: white;
+    font-weight: 300px;
+    line-height: 30px;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    
+}
+.second{
+    display: flex;
+    flex-direction: column;
+}
+.third ul li{
+   display: flex;
+   flex-direction: row;
+}
+
+@media (max-width: 600px) {
+    .title{
+        font-size: 60px;
+        margin-top: 50px;
+    }
+    .titleDiv{
+        margin-top: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        line-height: 0.85;
+        letter-spacing: 0px;
+        font-weight: 400;
+        font-family: "FuturaNike",var(--displayFont,"FuturaNike"),sans-serif;
+        font-style: normal;
+        background-color: rgb(14, 14, 14);
+        color: white;
+    }
+    .secondDiv{
+        padding: 10px;
+        text-overflow: hidden;
+        background-color: rgb(14, 14, 14);
+        color: white;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 10px;
+        gap: 5px;
+    }
+    .secondDiv img{
+        box-shadow: 0 2px 8px rgba(165, 156, 156, 0.25);
+        width: 300px;
+    }
+    .thirdDiv{
+        padding: 10px;
+        text-overflow: hidden;
+        background-color: rgb(14, 14, 14);
+        color: white;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 15px;
+        gap: 5px;
+        width: 100%;
+    }
+    .thirdDiv img{
+        box-shadow: 0 2px 8px rgba(165, 156, 156, 0.25);
+        width: 300px;
+    }
+
+    .footer{
+        background-color:  rgb(54, 53, 53);
+        display: flex;
+        justify-content: space-evenly   ;
+        padding: 15px;
+        
+    }
+    .footer ul li{
+        color: white;
+        font-weight: 200px;
+        line-height: 20px;
+    }
+    .first{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .second{
+        display: flex;
+        flex-direction: column;
+    }
+    .third ul li{
+       display: flex;
+    }
+  }
+
+  @keyframes slide-up{
+    0%{
+      transform : translateY(30px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

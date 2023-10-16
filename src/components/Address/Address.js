@@ -60,7 +60,7 @@ const Address =(props)=>{
                         />
                     </div>
                     <div className={classes.btn}>
-                        <button onClick={props.close}>Order</button>   
+                        <button onClick={props.open}>Order</button>   
                         <button onClick={props.close}>Close</button>
                     </div>
                    

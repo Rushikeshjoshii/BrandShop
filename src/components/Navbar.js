@@ -76,7 +76,7 @@ const Navbar = ()=>{
                         <NavLink to='/cart' style={({ isActive }) => ({ 
                                 color: isActive ? 'red' : 'black',
                                 background: isActive ? 'white' : 'white',
-                                textDecoration:'none'
+                                textDecoration:'none',
                             })}>{HiShoppingCart}</NavLink>
                         
                     </li>

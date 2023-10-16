@@ -10,7 +10,7 @@ ul li{
     align-items: center;
     display: flex;
     justify-content: space-evenly;
-    
+    font-weight: 500;
 }
 
 .list li{
@@ -26,7 +26,7 @@ ul li{
 .list a:hover,
 .list a:active{
     color: rgb(204, 10, 10);
-    
+    border-bottom: 2px solid rgb(241, 9, 9);
 }
 
 
@@ -63,5 +63,6 @@ ul li{
         color: red;
         background-color: white;
         border-radius: 12px;
+        border-bottom: 2px solid rgb(241, 9, 9)
     }
 }

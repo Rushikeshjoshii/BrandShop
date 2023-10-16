@@ -21,7 +21,6 @@ const MainPage=()=>{
                         <h1>YOUR FEET DESERVE THE BEST</h1>
                         <p>
                             YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR SHOES.
-                            YOUR FEET DESERVE THE BEST AND WE’RE HERE TO HELP YOU WITH OUR SHOES.
                         </p>
 
                     <div className={classes.button}>
@@ -42,6 +41,10 @@ const MainPage=()=>{
                        <img src={shoeImg} alt="shoe image"/>
                     </div>
                 </main>
+            </div>
+            <div className={classes.div2}>
+                <h1>RUN YOUR RUN</h1>
+                
             </div>
         </Fragment>
     );
